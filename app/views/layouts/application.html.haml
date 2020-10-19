@@ -1,0 +1,24 @@
+!!! 5
+%html
+    %head
+        %title RottenPotatoes!
+        = stylesheet_link_tag 'application'
+        = javascript_pack_tag 'application'
+        = csrf_meta_tags
+    %body
+        %h1.title
+        = link_to "RottenPotatoes", movies_path
+    #login
+        -if @current_user
+            %p.welcome Welcome, #{@current_user.name}!
+            = link_to 'Logout', logout_path, :method => :post
+        - else
+            %p.login= link_to 'Log in with Twitter', OmniAuth.login_path(:twitter)
+ 
+        - if flash[:notice]
+            #notice.message= flash[:notice]
+        - elsif flash[:warning]
+            #warning.message= flash[:warning]
+
+        = yield
+        

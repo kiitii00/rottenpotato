@@ -1,0 +1,47 @@
+-# in app/views/movies/show.html.haml
+%h2 Details about #{@movie.title}
+%ul#details
+  %li
+    Rating:
+    = @movie.rating
+  %li
+    Released on:
+    = @movie.release_date.strftime("%B %d, %Y")
+%h3 Description:
+
+%p#description= @movie.description
+
+%h3 Reviews:
+= link_to 'Add Review', new_movie_review_path(@movie)
+%ul#details
+
+  - @movie.reviews.each do |review|
+    %b Potatoes:
+    %tr
+    %td= review.potatoes
+    %tr
+      %td name :
+      %td= review.moviegoer.name
+      %td | comments : 
+      %tr
+        -if review.comments != ""
+          %td= review.comments
+        -else
+          %td= 'No Comment'
+
+        %br
+
+        -if @current_user.name == review.moviegoer.name
+          = link_to 'Edit review', edit_movie_review_path(@movie,review)
+          %label /
+          = link_to 'Delete review', movie_review_path(@movie,review), :method => :delete
+          %br
+        %br
+
+-# modify last 2 lines of app/views/movies/show.html.haml to:
+= link_to 'Edit info', edit_movie_path(@movie) 
+%label /
+= link_to 'Back to movie list', movies_path
+%label /
+-# This Delete link will not really be a link, but a form:
+= link_to 'Delete', movie_path(@movie), :method => :delete
