@@ -30,6 +30,7 @@
     color: maroon;
     text-decoration: underline;
     font-weight: bold;
+    
   }
   h1 {
     color: maroon;
@@ -45,8 +46,8 @@
     padding: 50px;
     background-color: maroon;
     color: white;
-    border-bottom: 4px solid white;
-    font-size: 2em;
+    border-bottom: 4px solid whitesmoke;
+    font-size: 5em;
     font-style: normal;
   }
   table#movies {
@@ -56,9 +57,9 @@
     border-bottom: 2px solid black;
   }
   table#movies th {
-    border: 2px solid white;
+    border: 2px solid rgb(28, 116, 20);
     font-weight: bold;
-    background-color: wheat;
+    background-color: rgb(240, 179, 245);
   }
   table#movies th, table#movies td {
     padding: 4px;
@@ -73,7 +74,7 @@
     display: block;
     line-height: 25px;
     font-weight: bold;
-    color: maroon;
+    color: rgb(94, 94, 243);
   }
 
   #movieInfo {
@@ -89,7 +90,7 @@ table#tmdb_movies {
   border-bottom: 2px solid black;
 }
 table#tmdb_movies th {
-  border: 2px solid white;
+  border: 2px solid rgb(141, 137, 137);
   font-weight: bold;
   background-color: wheat;
 }
@@ -97,3 +98,9 @@ table#tmdb_movies th, table#tmdb_movies td {
   padding: 4px;
   text-align: left;
 } 
+#banner {
+  text-align: center;
+  font-size: 50px;
+  background-color: orange;
+  
+}
