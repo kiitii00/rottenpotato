@@ -42,10 +42,10 @@
   }
   h1.title {
     margin: 0 0 1em;
-    padding: 10px;
-    background-color: orange;
+    padding: 50px;
+    background-color: maroon;
     color: white;
-    border-bottom: 4px solid gold;
+    border-bottom: 4px solid white;
     font-size: 2em;
     font-style: normal;
   }

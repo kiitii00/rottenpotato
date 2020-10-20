@@ -7,8 +7,10 @@ require("@rails/ujs").start()
 require("turbolinks")
 require("@rails/activestorage").start()
 require("channels")
+
 require("jquery")
 require("bootstrap")
+
 require("packs/custom")
 require("packs/movie_popup")
 require("packs/movie_list_filter")

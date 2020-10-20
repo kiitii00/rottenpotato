@@ -42,16 +42,16 @@ var MovieListFilter = {
     setup: function() {
         // construct checkbox with label
         var labelAndCheckbox =
-        $('<input type="checkbox" id="G_filter" checked/>'+
-        '<label for="G_filter"> G </label>' +
-        '<input type="checkbox" id="PG_filter" checked/>'+
-        '<label for="PG_filter"> PG </label>' +
-        '<input type="checkbox" id="PG-13_filter" checked/>'+
-        '<label for="PG-13_filter"> PG-13 </label>' +
-        '<input type="checkbox" id="R_filter" checked/>'+
-        '<label for="R_filter"> R </label>' +
-        '<input type="checkbox" id="NC-17_filter" checked/>' +
-        '<label for="NC-17_filter"> NC-17 </label>');
+            $('<input type="checkbox" id="G_filter" checked/>'+
+            '<label for="G_filter"> G </label>' +
+            '<input type="checkbox" id="PG_filter" checked/>'+
+            '<label for="PG_filter"> PG </label>' +
+            '<input type="checkbox" id="PG-13_filter" checked/>'+
+            '<label for="PG-13_filter"> PG-13 </label>' +
+            '<input type="checkbox" id="R_filter" checked/>'+
+            '<label for="R_filter"> R </label>' +
+            '<input type="checkbox" id="NC-17_filter" checked/>' +
+            '<label for="NC-17_filter"> NC-17 </label>');
 
         labelAndCheckbox.insertBefore('#movies');
         $('#G_filter').change(MovieListFilter.filter_G);
